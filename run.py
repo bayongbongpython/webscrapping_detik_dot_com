@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Test'
+    return render_template('index.html')
+ 
 
 
 
