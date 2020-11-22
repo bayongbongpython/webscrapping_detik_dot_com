@@ -14,25 +14,20 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
-  <a class="navbar-brand" href="#">TUTORIAL SCRAPPING</a>
+  <a class="navbar-brand" href="/">TUTORIAL SCRAPPING</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#">Link 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 2</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 3</a>
+      <a class="nav-link" href="detik-populer">Project</a>
     </li>
   </ul>
 </nav>
 
 <div class="container-fluid">
-  <h3>Start Your Scrapping Today</h3>
-  <p>Belajar Scrapping dari web detik.com.</p>
+  {% for image in images %}
+      {{image|safe}}
+  <a href="{{ image.find('a')['href']|safe">{{images.find('a').find('img')['title']|safe}}<</a>
 </div>
 
 </body>
