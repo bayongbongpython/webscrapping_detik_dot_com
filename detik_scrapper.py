@@ -5,9 +5,10 @@ html_doc = requests.get('https://www.detik.com/terpopuler', params={'tag_from': 
 print(html_doc.text)
 
 soup = BeautifulSoup(html_doc.text, 'html.parser')
-populer_area = soup.find(attrs={'class': 'list-content'})
-titles = populer_area.find_all(attrs={'class': 'media_title'})
+populer_area = soup.find(attrs={'class':'list-content'})
+titles = populer_area.find_all(attrs={'class':'media_title'})
+images = populer_area.find_all(attrs={'class':'media_image'})
 
-for title in titles:
-    print(title.text)
-# print(titles)
+for image in images:
+     print(images.find('a').find('img')['title'])
+ # print(titles)
